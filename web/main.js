@@ -10,7 +10,14 @@ let doPage = () => {
 
   image.onload = () => {
     context.drawImage(image, 0, 0);
-    result.src = canvas.toDataURL('image/jpeg');
+    try {
+        result.src = canvas.toDataURL('image/jpeg');
+    } catch (e) {
+        if (e.name !== 'DOMException') {
+            throw e;
+        }
+    }
+    
     console.log('done');
   };
 
