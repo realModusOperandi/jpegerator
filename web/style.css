@@ -78,13 +78,10 @@ body {
     font-size: 3em;
 }
 
-.canvasContainer {
+.resultContainer {
     display: flex;
     justify-content: center;
     align-items: center;
-}
-
-#imageCanvas {
     width: 1280px;
     height: 800px;
     border: 1px solid black;
